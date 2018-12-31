@@ -22,7 +22,7 @@ class PageContentView: UIView {
     
     // 懒初始化collectionView
     private lazy var collectionView: UICollectionView = {
-        // 创建layout
+        // 创建layout, 流水布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = self.bounds.size
         layout.minimumLineSpacing = 0
