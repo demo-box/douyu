@@ -8,11 +8,13 @@
 
 import UIKit
 
-class CollectionViewNormalCell: UICollectionViewCell {
+class CollectionViewNormalCell: CollectionBaseCell {
+    @IBOutlet weak var roomNameLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override var anchor: AnchorModel? {
+        didSet {
+            super.anchor = anchor
+            roomNameLabel.text = anchor?.room_name
+        }
     }
-
 }

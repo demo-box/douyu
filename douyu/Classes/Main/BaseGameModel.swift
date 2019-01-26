@@ -24,6 +24,5 @@ class BaseGameModel: NSObject {
     }
     
     override func setValue(_ value: Any?, forKey key: String) {
-        
     }
 }

@@ -17,6 +17,9 @@
 		B404F20421DA5EC3007C8F57 /* CollectionViewPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B404F20221DA5EC3007C8F57 /* CollectionViewPrettyCell.xib */; };
 		B451D81921A19C34005EC2E1 /* PageTtileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451D81821A19C34005EC2E1 /* PageTtileView.swift */; };
 		B451D81B21A19E17005EC2E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451D81A21A19E17005EC2E1 /* Constants.swift */; };
+		B45A965521FCB9AA00FABE7B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A965421FCB9AA00FABE7B /* BaseViewModel.swift */; };
+		B45A965721FCBF0000FABE7B /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A965621FCBF0000FABE7B /* CycleModel.swift */; };
+		B45A965921FCC7AE00FABE7B /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A965821FCC7AE00FABE7B /* CollectionBaseCell.swift */; };
 		B4AF1B1E21A96A7D000BD9A8 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AF1B1D21A96A7D000BD9A8 /* PageContentView.swift */; };
 		B4AF1B2021A9BCA2000BD9A8 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AF1B1F21A9BCA2000BD9A8 /* UIColorExtension.swift */; };
 		B4C9E45D21A12B30001A13F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9E45C21A12B30001A13F6 /* AppDelegate.swift */; };
@@ -29,7 +32,7 @@
 		B4C9E49D21A14112001A13F6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9E49C21A14112001A13F6 /* HomeViewController.swift */; };
 		B4C9E49F21A142CB001A13F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C9E49E21A142CB001A13F6 /* Assets.xcassets */; };
 		B4F22C5D21F4CB0A00031D75 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F22C5C21F4CB0A00031D75 /* Network.swift */; };
-		B4F22C5F21F4D2BB00031D75 /* RecommendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F22C5E21F4D2BB00031D75 /* RecommendService.swift */; };
+		B4F22C5F21F4D2BB00031D75 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F22C5E21F4D2BB00031D75 /* RecommendViewModel.swift */; };
 		B4F22C6121F4D37000031D75 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F22C6021F4D37000031D75 /* DateExtension.swift */; };
 		B4F22C6321F4D72700031D75 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F22C6221F4D72700031D75 /* AnchorGroup.swift */; };
 		B4F22C6521F4D7B000031D75 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F22C6421F4D7B000031D75 /* AnchorModel.swift */; };
@@ -47,6 +50,9 @@
 		B404F20221DA5EC3007C8F57 /* CollectionViewPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewPrettyCell.xib; sourceTree = "<group>"; };
 		B451D81821A19C34005EC2E1 /* PageTtileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTtileView.swift; sourceTree = "<group>"; };
 		B451D81A21A19E17005EC2E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B45A965421FCB9AA00FABE7B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B45A965621FCBF0000FABE7B /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
+		B45A965821FCC7AE00FABE7B /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		B4AF1B1D21A96A7D000BD9A8 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		B4AF1B1F21A9BCA2000BD9A8 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B4C9E45921A12B30001A13F6 /* douyu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = douyu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +67,7 @@
 		B4C9E49C21A14112001A13F6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B4C9E49E21A142CB001A13F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F22C5C21F4CB0A00031D75 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		B4F22C5E21F4D2BB00031D75 /* RecommendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendService.swift; sourceTree = "<group>"; };
+		B4F22C5E21F4D2BB00031D75 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		B4F22C6021F4D37000031D75 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B4F22C6221F4D72700031D75 /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		B4F22C6421F4D7B000031D75 /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
@@ -141,7 +147,8 @@
 				B404F1F721D9FAA7007C8F57 /* RecommendViewController.swift */,
 				B404F1F921DA4C5E007C8F57 /* CollectionHeaderView.swift */,
 				B404F1FA21DA4C5E007C8F57 /* CollectionHeaderView.xib */,
-				B4F22C5E21F4D2BB00031D75 /* RecommendService.swift */,
+				B4F22C5E21F4D2BB00031D75 /* RecommendViewModel.swift */,
+				B45A965621FCBF0000FABE7B /* CycleModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -167,6 +174,8 @@
 				B4F22C6221F4D72700031D75 /* AnchorGroup.swift */,
 				B4F22C6421F4D7B000031D75 /* AnchorModel.swift */,
 				B4F22C6621F4DB2D00031D75 /* BaseGameModel.swift */,
+				B45A965421FCB9AA00FABE7B /* BaseViewModel.swift */,
+				B45A965821FCC7AE00FABE7B /* CollectionBaseCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -317,12 +326,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-douyu/Pods-douyu-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,17 +347,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4F22C5F21F4D2BB00031D75 /* RecommendService.swift in Sources */,
+				B4F22C5F21F4D2BB00031D75 /* RecommendViewModel.swift in Sources */,
 				B4F22C6521F4D7B000031D75 /* AnchorModel.swift in Sources */,
+				B45A965521FCB9AA00FABE7B /* BaseViewModel.swift in Sources */,
 				B451D81921A19C34005EC2E1 /* PageTtileView.swift in Sources */,
 				B4C9E45D21A12B30001A13F6 /* AppDelegate.swift in Sources */,
 				B4F22C6721F4DB2D00031D75 /* BaseGameModel.swift in Sources */,
 				B404F20321DA5EC3007C8F57 /* CollectionViewPrettyCell.swift in Sources */,
 				B404F1F821D9FAA7007C8F57 /* RecommendViewController.swift in Sources */,
 				B4F22C6121F4D37000031D75 /* DateExtension.swift in Sources */,
+				B45A965921FCC7AE00FABE7B /* CollectionBaseCell.swift in Sources */,
 				B4C9E49D21A14112001A13F6 /* HomeViewController.swift in Sources */,
 				B4F22C5D21F4CB0A00031D75 /* Network.swift in Sources */,
 				B4AF1B1E21A96A7D000BD9A8 /* PageContentView.swift in Sources */,
+				B45A965721FCBF0000FABE7B /* CycleModel.swift in Sources */,
 				B404F1FB21DA4C5E007C8F57 /* CollectionHeaderView.swift in Sources */,
 				B4F22C6321F4D72700031D75 /* AnchorGroup.swift in Sources */,
 				B451D81B21A19E17005EC2E1 /* Constants.swift in Sources */,

@@ -54,10 +54,14 @@ class RecommendViewController: UIViewController { // 无主引用
         
         return collectionView
     }()
+    
+    // 创建VM
+    lazy var recommendVM: RecommendViewModel = RecommendViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        loadData()
     }
 }
 
@@ -71,23 +75,28 @@ extension RecommendViewController {
 // dataSource
 extension RecommendViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let count = recommendVM.anchorGroups[section].anchors.count
+        return count
     }
     
+    
+    // MARK: cell数据无法正常显示
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // 定义cell
-        var cell: UICollectionViewCell?
+        // 取出模型对象
+        let group = recommendVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
         
         // 通过section获取不同的cell
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCell, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCell, for: indexPath) as! CollectionViewPrettyCell
+            cell.anchor = anchor
+            print("hello_city:\(cell.anchor?.anchor_city ?? "hello")")
+            return cell
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCell, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCell, for: indexPath) as! CollectionViewNormalCell
+            cell.anchor = anchor
+            return cell
         }
-        return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -97,7 +106,7 @@ extension RecommendViewController: UICollectionViewDataSource {
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.anchorGroups.count
     }
 }
 
@@ -109,5 +118,15 @@ extension RecommendViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: kItemW, height: kPrettyItemH)
         }
         return CGSize(width: kItemW, height: kNormalItemH)
+    }
+}
+
+// 请求数据
+extension RecommendViewController {
+    private func loadData() {
+        recommendVM.requestData {
+            print("reloadData")
+            self.collectionView.reloadData()
+        }
     }
 }

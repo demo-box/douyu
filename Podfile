@@ -8,5 +8,6 @@ target 'douyu' do
   # Pods for douyu
 
 pod 'Alamofire', '~> 4.0.1'
+pod 'Kingfisher'
 
 end

@@ -28,4 +28,7 @@ class AnchorModel: NSObject {
         setValuesForKeys(dict)
     }
 
+    // 一定要override setValue, 否则报错
+    override func setValue(_ value: Any?, forKey key: String) {
+    }
 }
